@@ -1,0 +1,33 @@
+<table class="table is-fullwidth">
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Date visited</th>
+      <th>Visit details</th>
+      <th>Pictures</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each list.locations}}
+      <tr>
+        <td>
+          {{location}}
+        </td>
+        <td>
+          {{date}}
+        </td>
+        <td>
+          {{details}}
+        </td>
+        <td>
+          {{pictures}}
+        </td>
+        <td>
+          <a href="/list/{{../list._id}}/deletelocation/{{_id}}" class="ui icon button">
+            <i class="fas fa-trash"></i>
+          </a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
