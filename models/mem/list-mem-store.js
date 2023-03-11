@@ -20,13 +20,16 @@ export const listMemStore = {
 
   async getListById(id) {
     const form = lists.find((list) => list._id === id);
-    form.locations = await locationMemStore.getLocationsByListId(form._id);
+    if (form) {
+      form.locations = await locationMemStore.getLocationsByListId(form._id);
     return form;
+    }
+    return null;
   },
 
   async deleteListById(id) {
     const index = lists.findIndex((list) => list._id === id);
-    lists.splice(index, 1);
+    if (index !== -1) lists.splice(index, 1);
   },
 
   async deleteAllLists() {
