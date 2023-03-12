@@ -48,7 +48,7 @@ export const locationJsonStore = {
     location.longitude = updatedLocation.longitude;
     location.date = updatedLocation.date;
     location.details = updatedLocation.details;
-    location.img = updatedLocation.img;
+    location.pictures = updatedLocation.pictures;
     await db.write();
   },
 };

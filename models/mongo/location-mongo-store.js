@@ -1,4 +1,5 @@
 import { Location } from "./location.js";
+import { List } from "./list.js";
 
 export const locationMongoStore = {
   async getAllLocations() {
@@ -44,7 +45,7 @@ export const locationMongoStore = {
     location.longitude = updatedLocation.longitude;
     location.date = updatedLocation.date;
     location.detail = updatedLocation.detail;
-    location.img = updatedLocation.img;
+    location.pictures = updatedLocation.pictures;
     await location.save();
   },
 };

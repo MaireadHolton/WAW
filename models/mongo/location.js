@@ -1,4 +1,5 @@
 import Mongoose from "mongoose";
+import Boom from "@hapi/boom";
 
 const { Schema } = Mongoose;
 
@@ -8,7 +9,7 @@ const locationSchema = new Schema({
   longitude: Number,
   date: String,
   details: String,
-  img: String,
+  pictures: String,
   listid: {
     type: Schema.Types.ObjectId,
     ref: "List",
